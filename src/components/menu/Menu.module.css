@@ -1,0 +1,85 @@
+.container {
+    top:0px;
+    left:0px;
+    @apply fixed p-3;
+    /*display: grid;
+    grid-template-columns: 50px 1fr;*/
+}
+
+.link {
+    @apply block mb-5 relative text-3xl font-bold transition-all;
+    color: #999;
+    transition-duration: 0.5s;
+}
+
+.dot {
+    font-size:0;
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    background-color:#ccc;
+    display:block;
+    margin-left:5px;
+    @apply transition-all;
+    overflow: hidden;
+}
+
+.link:hover span {
+    transform: scale(0.7);
+}
+
+.link:hover span {
+    opacity:1;
+}
+
+.link:active {
+    opacity:0.5;
+}
+
+.linkActive .dot {
+    background-color:var(--primary);
+}
+
+.brandName {
+    @apply text-lg font-extrabold -mt-1 -rotate-90;
+    outline:0 solid red;
+    width:180px;
+    height:20px;
+    margin:80px 0 100px -80px;
+    cursor:default;
+}
+
+.dotExpansion {
+    @apply absolute left-0 top-0 pointer-events-none;
+    animation: expandDot 0.8s ease-in;
+    border:5px solid var(--primary);
+    background-color:transparent !important;
+}
+
+.animated {
+    animation: spin 0.8s;
+}
+
+@keyframes expandDot {
+    0% {
+    transform: scale(1);
+    }
+    100% {
+    transform: scale(200);
+    opacity:0;
+    left:90px;
+    filter:blur(1px);
+    }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(30deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
