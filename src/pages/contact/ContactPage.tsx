@@ -3,15 +3,15 @@ import { Button } from '@chakra-ui/react';
 import { NavLink } from "react-router-dom";
 
 export default function ContactPage() {
-    return (<section className="main">
+    return (<main className="main">
        <h1>Let's work together<span className="color-primary">.</span></h1>
-       <h2>If you are interested in my services and want to hire me (consulting or full-time job), please use the following ways of contact.</h2>
+       <h2>If you are interested in my services and would like to hire me for consulting or a full-time job, please use the following methods of contact.</h2>
         
           <div>
             <ul>
         
           <li className={styles.link}><NavLink className="underlined" target="_blank" to="mailto:jplozano6@gmail.com">
-            Contact me
+            Contact me via email
           </NavLink></li>
 
           <li className={styles.link}><NavLink className="underlined" target="_blank" to="https://www.linkedin.com/in/juanpablolozano-6/">
@@ -23,5 +23,5 @@ export default function ContactPage() {
             Schedule a meeting
   </button>*/}
           </div>
-    </section>);
+    </main>);
 }

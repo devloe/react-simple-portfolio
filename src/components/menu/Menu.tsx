@@ -20,7 +20,7 @@ function MenuLink({text, path}: MenuLinkProps): React.ReactElement {
 
   useEffect(() => {
     setDotEnabled(location.pathname === path);
-  }, [location]);
+  }, [location, path]);
 
   function clickHandler() {
     setDotActivated(true);
@@ -28,7 +28,7 @@ function MenuLink({text, path}: MenuLinkProps): React.ReactElement {
   
   return (
     <NavLink onClick={clickHandler} className={`${styles.link} ${dotEnabled ? styles.linkActive : ""}`} to={path} title={text}>
-      <span className={styles.dot}>{text}</span>
+      <span className={styles.dot}></span>
       {dotEnabled && dotActivated ? <div className={`${styles.dot} ${styles.dotExpansion}`}></div> : null}
     </NavLink>
   );
@@ -52,7 +52,7 @@ function SwitchTheme(): React.ReactElement {
   }
 
   return (
-    <IconButton title={buttonTitle} size="md" aria-label='Switch dark/light' onClick={clickHandler} className={classes.join(" ")}>
+    <IconButton title={buttonTitle} size="md" aria-label={buttonTitle} onClick={clickHandler} className={classes.join(" ")}>
           {icon}
         </IconButton>
   );
@@ -61,9 +61,9 @@ function SwitchTheme(): React.ReactElement {
 export default function Menu() {
     return (
       <nav className={styles.container}>
-        <div className={styles.brandName}>
+        <NavLink to="/" aria-label="Juan Pablo Lozano" className={styles.brandName}>
           <TypeAnimation sequence={["Juan Pablo Lozano"]} cursor={true}></TypeAnimation>
-          </div>
+          </NavLink>
         <MenuLink text="About" path="/" />
         <MenuLink text="Tech stack" path="/tech" />
         <MenuLink text="Contact" path="/contact" />

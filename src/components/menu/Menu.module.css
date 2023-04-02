@@ -7,13 +7,12 @@
 }
 
 .link {
-    @apply block mb-5 relative text-3xl font-bold transition-all;
+    @apply block mb-4 relative text-3xl font-bold transition-all;
     color: #999;
     transition-duration: 0.5s;
 }
 
 .dot {
-    font-size:0;
     width:20px;
     height:20px;
     border-radius:50%;
@@ -22,14 +21,7 @@
     margin-left:5px;
     @apply transition-all;
     overflow: hidden;
-}
-
-.link:hover span {
-    transform: scale(0.7);
-}
-
-.link:hover span {
-    opacity:1;
+    transform: scale(1);
 }
 
 .link:active {
@@ -38,20 +30,20 @@
 
 .linkActive .dot {
     background-color:var(--primary);
+    transform: scale(1);  
 }
 
 .brandName {
-    @apply text-lg font-extrabold -mt-1 -rotate-90;
+    @apply block text-lg font-extrabold -mt-1 -rotate-90;
     outline:0 solid red;
     width:180px;
     height:20px;
     margin:80px 0 100px -80px;
-    cursor:default;
 }
 
 .dotExpansion {
     @apply absolute left-0 top-0 pointer-events-none;
-    animation: expandDot 0.8s ease-in;
+    animation: expandDot 1.5s ease-in;
     border:5px solid var(--primary);
     background-color:transparent !important;
 }
@@ -63,12 +55,14 @@
 @keyframes expandDot {
     0% {
     transform: scale(1);
+    opacity:.5;
     }
     100% {
-    transform: scale(200);
+    transform: scale(1000);
     opacity:0;
     left:90px;
     filter:blur(1px);
+        opacity:1;
     }
 }
 

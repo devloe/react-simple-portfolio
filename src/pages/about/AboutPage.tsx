@@ -5,7 +5,7 @@ import styles from './AboutPage.module.css'
 
 export default function AboutPage() {
   return (
-    <section className="main">
+    <main className="main">
         <h1 className={styles.mainTitle}>
           Fuel by passion and curiosity<span className="color-primary">.</span>
           </h1>
@@ -18,12 +18,12 @@ export default function AboutPage() {
  <p> Throughout my career, I have worked with a variety of programming languages and frameworks. I have collaborated with cross-functional teams to build web and mobile applications, ensuring that they are responsive, accessible, and optimized for performance.</p>
 
  <p> In addition to my technical skills, I bring a strong work ethic, attention to detail, and a collaborative mindset to every project. I believe in staying up-to-date with the latest trends and best practices in frontend development, and I enjoy sharing my knowledge and insights with others.</p>
- <p>/ /</p>
+ <p aria-hidden="true">/ /</p>
  <p><NavLink target="_blank" to={`CV - Juan Pablo Lozano.pdf`} className="underlined mr-4">
             View resumè
           </NavLink> </p>
           </div>
         
-        </section>
+        </main>
   )
 }

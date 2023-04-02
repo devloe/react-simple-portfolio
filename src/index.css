@@ -13,7 +13,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-rgb: 255, 255, 255;
 
-  --primary: #00f0a8;
+  --primary: #00d5dd;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -49,10 +49,10 @@ body {
     tab-size: 4;
     font-family: var(--font-family);
     font-feature-settings: normal;
-    @apply text-lg;
-    transition: background, color .5s ease;
-  
+    @apply text-base md:text-lg lg:text-lg;
+    transition: background, color .5s ease;  
 }
+
 
 a {
   color: inherit;
@@ -70,15 +70,15 @@ p {
 }
 
 h1 {
-  @apply mb-10 text-6xl font-extrabold;
+  @apply mb-10 text-4xl lg:text-6xl font-extrabold;
 }
 
 h2 {
-  @apply mb-10 text-2xl font-bold;
+  @apply mb-10 text-2xl lg:text-3xl font-bold;
 }
 
 h3 {
-  @apply mb-5 text-lg font-bold;
+  @apply mb-5 text-lg lg:text-lg font-bold;
 }
 
 .main {

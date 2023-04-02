@@ -1,35 +1,39 @@
 import styles from './TechPage.module.css'
 
 export default function TechPage() {
-    return (<section className="main">
+    return (<main className="main">
         <h1>Tech stack <span className="color-primary">.</span></h1>
-        <h2>The following are the languages and frameworks that I domain, ordered by expertise.</h2>
+        <h2>The following are the languages and frameworks in which I have expertise, ordered by proficiency.</h2>
         <div className={styles.container}>
-        <div>
-            <h3>Languages</h3>
-            <p>Javascript </p>
-            <p>Typescript </p>
-            <p>HTML</p>
-            <p>CSS</p>
-            <p>Swift</p>
-            <p>PHP</p>
-            <p>Java/Kotlin</p>
-            <p>SQL</p>
-            <p>Dart</p>
-        </div>
+            <div>
+                <h3>Languages</h3>
+                <ul>
+                    <li>Javascript </li>
+                    <li>Typescript </li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Swift</li>
+                    <li>PHP</li>
+                    <li>Java/Kotlin</li>
+                    <li>SQL</li>
+                    <li>Dart</li>
+                </ul>
+            </div>
 
-        <div>
-            <h3>Frameworks & Libraries</h3>
-            <p>Vue</p>
-            <p>React 16+</p>
-            <p>Angular</p>
-            <p>Webpack</p>
-            <p>NodeJS</p>
-            <p>Flutter</p>
-            <p>Jest</p>
-            <p>Cypress</p>
-            <p>Laravel</p>
+            <div>
+            <h3>Frameworks</h3>
+            <ul>
+                <li>Vue</li>
+                <li>React 16+</li>
+                <li>Angular</li>
+                <li>Webpack</li>
+                <li>NodeJS</li>
+                <li>Flutter</li>
+                <li>Jest</li>
+                <li>Cypress</li>
+                <li>Laravel</li>
+            </ul>
+            </div>
         </div>
-        </div>
-    </section>);
+    </main>);
 }
