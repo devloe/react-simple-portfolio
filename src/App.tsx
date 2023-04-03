@@ -7,9 +7,8 @@ function App() {
   return (
     <div className={styles.container}>
       <Menu />
-      <Footer />
       <Outlet />
-      
+      <Footer />
     </div>
   );
 }
