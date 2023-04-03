@@ -14,14 +14,25 @@ jest.mock("../switchTheme/SwitchTheme", () => {
     };
   });
 
-test('Menu => renders', () => {
-    render(<BrowserRouter><Menu /></BrowserRouter>);
-
-    expect(screen.getByRole('navigation')).toBeInTheDocument(); 
-});
-
-test('Menu => renders all items', () => {
-  render(<BrowserRouter><Menu /></BrowserRouter>);
-
-  expect(screen.getAllByRole("menuitem").length).toBe(3);
-});
+  describe("Menu component", () => {
+    it('should render', () => {
+        render(<BrowserRouter><Menu /></BrowserRouter>);
+    
+        expect(screen.getByRole('navigation')).toBeInTheDocument(); 
+    });
+    
+    it('should render all nav links', () => {
+      const {container} = render(<BrowserRouter><Menu /></BrowserRouter>);
+      
+      // eslint-disable-next-line testing-library/no-container, testing-library/no-node-access
+      expect(container.getElementsByClassName("link").length).toBe(3);
+    });
+    
+    it('should render brand name', async () => {
+      render(<BrowserRouter><Menu /></BrowserRouter>);
+    
+      await new Promise((r) => setTimeout(r, 1500));
+    
+      expect(screen.getByText('Juan Pablo Lozano')).toBeInTheDocument(); 
+    });
+  });

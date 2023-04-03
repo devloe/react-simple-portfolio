@@ -24,7 +24,7 @@ function MenuLink({text, path}: MenuLinkProps): React.ReactElement {
   }
   
   return (
-    <NavLink role="menuitem" onClick={clickHandler} className={`${styles.link} ${dotEnabled ? styles.linkActive : ""}`} to={path} title={text}>
+    <NavLink onClick={clickHandler} className={`${styles.link} ${dotEnabled ? styles.linkActive : ""}`} to={path} title={text}>
       <span className={styles.dot}></span>
       {dotEnabled && dotActivated ? <div className={`${styles.dot} ${styles.dotExpansion}`}></div> : null}
     </NavLink>
