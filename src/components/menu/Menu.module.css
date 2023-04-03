@@ -34,11 +34,10 @@
 }
 
 .brandName {
-    @apply block text-lg font-extrabold -mt-1 -rotate-90;
-    outline:0 solid red;
-    width:180px;
+    @apply block text-xl font-extrabold -mt-1 -rotate-90;
+    width:190px;
     height:20px;
-    margin:80px 0 100px -80px;
+    margin:90px 0 120px -85px;
 }
 
 .dotExpansion {
@@ -48,9 +47,6 @@
     background-color:transparent !important;
 }
 
-.animated {
-    animation: spin 0.8s;
-}
 
 @keyframes expandDot {
     0% {
@@ -66,14 +62,3 @@
     }
 }
 
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(30deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}

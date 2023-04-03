@@ -50,9 +50,8 @@ body {
     font-family: var(--font-family);
     font-feature-settings: normal;
     @apply text-base md:text-lg lg:text-lg;
-    transition: background, color .5s ease;  
+    transition: background .5s ease;  
 }
-
 
 a {
   color: inherit;
@@ -87,25 +86,32 @@ h3 {
 }
 
 .underlined {
-  @apply relative text-gray-500;
+  @apply relative underline;
+  transition: color .25s ease;
 }
 
-.underlined:after {
-  bottom: -4px;
+/*.underlined:before {
+  top: 15px;
   content: "";
   display: block;
-  height: 3px;
+  height: 7px;
   left: 0;
   position: absolute;
-  transform: scaleX(0);
+  transform: scaleX(1);
   transform-origin: left;
-  transition: transform .25s ease;
+  opacity:.4;
+  transition: transform, height .25s ease;
   width: 100%;
   background-color: var(--primary);
 }
 
-.underlined:hover:after {
-  transform: scaleX(1);
+.underlined:hover {
+  text-decoration: none;
+  color:black;
+}*/
+
+.underlined:hover:before {
+  height: 4px;
 }
 
 .color-primary {
@@ -113,5 +119,19 @@ h3 {
 }
 
 ::selection {
-  background: var(--primary);
+  background: #ffff5f;
+}
+
+
+ul {
+  list-style: none; /* Remove default bullets */
+}
+
+ul li::before {
+  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: var(--primary); /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  
 }
