@@ -1,5 +1,5 @@
 import React from 'react';
-import Loader from '../components/Loader';
+import Loader from '../components/loader/Loader';
 import { Skin } from './stores/themeStore';
 
 export function suspenseComponent(component: React.ReactNode): React.ReactNode {
