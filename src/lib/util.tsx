@@ -2,7 +2,7 @@ import React from 'react';
 import Loader from '../components/loader/Loader';
 import { Skin } from './stores/themeStore';
 
-export function suspenseComponent(component: React.ReactNode): React.ReactNode {
+export function suspenseComponent(component: React.ReactElement): React.ReactElement {
     return (
         <React.Suspense fallback={<Loader />}>
             {component}
