@@ -19,7 +19,7 @@ export default function AboutPage() {
 
  <p> In addition to my technical skills, I bring a strong work ethic, attention to detail, and a collaborative mindset to every project. I believe in staying up-to-date with the latest trends and best practices in frontend development, and I enjoy sharing my knowledge and insights with others.</p>
  <p aria-hidden="true">/ /</p>
- <p><NavLink target="_blank" to={`CV - Juan Pablo Lozano.pdf`} className="underlined mr-4">
+ <p><NavLink target="_blank" to={`CV-JuanPabloLozano.pdf`} className="underlined mr-4">
             View resumè
           </NavLink> </p>
           </div>
