@@ -3,7 +3,11 @@ import { BrowserRouter } from 'react-router-dom';
 import CreditsPage from './CreditsPage';
 
 test('ContactPage => renders', () => {
-  render(<BrowserRouter><CreditsPage /></BrowserRouter>);
+  render(
+    <BrowserRouter>
+      <CreditsPage />
+    </BrowserRouter>
+  );
 
-  expect(screen.getByText("Credits & Disclaimer")).toBeInTheDocument();
+  expect(screen.getByText('Credits & Disclaimer')).toBeInTheDocument();
 });

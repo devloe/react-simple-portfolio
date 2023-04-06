@@ -1,8 +1,8 @@
 .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 
-  ul li {
-    @apply mb-2;
-  }
+ul li {
+  @apply mb-2;
+}

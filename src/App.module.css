@@ -1,3 +1,5 @@
 .container {
-     
+  @apply m-auto pt-20 pr-20 pl-20 pb-20;
+  max-width: 800px;
+  min-height: 80vh;
 }

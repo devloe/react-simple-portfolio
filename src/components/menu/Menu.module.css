@@ -1,64 +1,62 @@
 .container {
-    top:0px;
-    left:0px;
-    @apply fixed p-3;
-    /*display: grid;
+  top: 0px;
+  left: 0px;
+  @apply fixed p-3;
+  /*display: grid;
     grid-template-columns: 50px 1fr;*/
 }
 
 .link {
-    @apply block mb-4 relative text-3xl font-bold transition-all;
-    color: #999;
-    transition-duration: 0.5s;
+  @apply block mb-4 relative text-3xl font-bold transition-all;
+  color: #999;
+  transition-duration: 0.5s;
 }
 
 .dot {
-    width:20px;
-    height:20px;
-    border-radius:50%;
-    background-color:#ccc;
-    display:block;
-    margin-left:5px;
-    @apply transition-all;
-    overflow: hidden;
-    transform: scale(1);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ccc;
+  display: block;
+  margin-left: 5px;
+  @apply transition-all;
+  overflow: hidden;
+  transform: scale(1);
 }
 
 .link:active {
-    opacity:0.5;
+  opacity: 0.5;
 }
 
 .linkActive .dot {
-    background-color:var(--primary);
-    transform: scale(1);  
+  background-color: var(--primary);
+  transform: scale(1);
 }
 
 .brandName {
-    @apply block text-xl font-extrabold -mt-1 -rotate-90;
-    width:190px;
-    height:20px;
-    margin:90px 0 120px -85px;
+  @apply block text-xl font-extrabold -mt-1 -rotate-90;
+  width: 190px;
+  height: 20px;
+  margin: 90px 0 120px -85px;
 }
 
 .dotExpansion {
-    @apply absolute left-0 top-0 pointer-events-none;
-    animation: expandDot 1.5s ease-in;
-    border:5px solid var(--primary);
-    background-color:transparent !important;
+  @apply absolute left-0 top-0 pointer-events-none;
+  animation: expandDot 1.5s ease-in;
+  border: 5px solid var(--primary);
+  background-color: transparent !important;
 }
-
 
 @keyframes expandDot {
-    0% {
+  0% {
     transform: scale(1);
-    opacity:.5;
-    }
-    100% {
+    opacity: 0.5;
+  }
+  100% {
     transform: scale(1000);
-    opacity:0;
-    left:90px;
-    filter:blur(1px);
-        opacity:1;
-    }
+    opacity: 0;
+    left: 90px;
+    filter: blur(1px);
+    opacity: 1;
+  }
 }
-

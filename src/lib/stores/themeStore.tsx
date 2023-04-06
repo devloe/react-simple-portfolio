@@ -1,30 +1,30 @@
-import { PayloadAction, createSlice } from "@reduxjs/toolkit";
-import { detectColorScheme, setColorScheme } from "../util";
+import { PayloadAction, createSlice } from '@reduxjs/toolkit';
+import { detectColorScheme, setColorScheme } from '../util';
 
-export type Skin = "dark" | "light";
+export type Skin = 'dark' | 'light';
 
 export type ThemeState = {
-    skin: Skin
-}
+  skin: Skin;
+};
 
 const initialSkin = detectColorScheme();
 
 setColorScheme(initialSkin);
 
 const initialState: ThemeState = {
-    skin: initialSkin
-}
+  skin: initialSkin,
+};
 
 const slice = createSlice({
-    name: 'theme',
-    initialState,
-    reducers: {
-      setSkin: (state, action: PayloadAction<Skin>) => { 
-        state.skin = action.payload;
+  name: 'theme',
+  initialState,
+  reducers: {
+    setSkin: (state, action: PayloadAction<Skin>) => {
+      state.skin = action.payload;
 
-        setColorScheme(action.payload);
-      }
-    }
-  })
+      setColorScheme(action.payload);
+    },
+  },
+});
 
-  export default slice;
+export default slice;

@@ -4,5 +4,5 @@ import Loader from './Loader';
 test('Loader => renders', () => {
   render(<Loader />);
 
-  expect(screen.getByText("Loading...")).toBeInTheDocument();
+  expect(screen.getByText('Loading...')).toBeInTheDocument();
 });

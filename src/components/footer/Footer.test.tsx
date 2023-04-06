@@ -3,7 +3,11 @@ import { BrowserRouter } from 'react-router-dom';
 import Footer from './Footer';
 
 test('Footer => renders', () => {
-  render(<BrowserRouter><Footer /></BrowserRouter>);
+  render(
+    <BrowserRouter>
+      <Footer />
+    </BrowserRouter>
+  );
 
-  expect(screen.getByText("Credits & Disclaimer")).toBeInTheDocument();
+  expect(screen.getByText('Credits & Disclaimer')).toBeInTheDocument();
 });
