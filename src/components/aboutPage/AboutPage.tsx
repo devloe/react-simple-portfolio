@@ -10,13 +10,13 @@ export default function AboutPage() {
         Fuel by passion and curiosity<span className="color-primary">.</span>
       </h1>
       <h2 className={styles.mainSubtitle}>
-        I'm Juan Pablo, a software developer specialized in frontend with over
-        10 years of experience in the industry.
+        I&apos;m Juan Pablo, a software developer specialized in frontend with
+        over 10 years of experience in the industry.
       </h2>
       <div className={styles.intro}>
         <p>
-          I'm passionate about creating elegant and functional user interfaces
-          that improve user experience and bring designs to life.
+          I&apos;m passionate about creating elegant and functional user
+          interfaces that improve user experience and bring designs to life.
         </p>
 
         <p>
@@ -39,7 +39,7 @@ export default function AboutPage() {
         <p>
           <NavLink
             target="_blank"
-            to={`CV-JuanPabloLozano.pdf`}
+            to="CV-JuanPabloLozano.pdf"
             className="underlined mr-4"
           >
             View resumè

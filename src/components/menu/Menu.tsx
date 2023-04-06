@@ -1,8 +1,8 @@
 import { NavLink, useLocation } from 'react-router-dom';
-import styles from './Menu.module.css';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import SwitchTheme from '../switchTheme/SwitchTheme';
+import styles from './Menu.module.css';
 
 interface MenuLinkProps {
   text: string;
@@ -12,16 +12,16 @@ interface MenuLinkProps {
 function MenuLink({ text, path }: MenuLinkProps): React.ReactElement {
   const location = useLocation();
 
-  let [dotEnabled, setDotEnabled] = useState<boolean>(false);
-  let [dotActivated, setDotActivated] = useState<boolean>(false);
+  const [dotEnabled, setDotEnabled] = useState<boolean>(false);
+  const [dotActivated, setDotActivated] = useState<boolean>(false);
 
   useEffect(() => {
     setDotEnabled(location.pathname === path);
   }, [location, path]);
 
-  function clickHandler() {
+  const clickHandler = useCallback(() => {
     setDotActivated(true);
-  }
+  }, []);
 
   return (
     <NavLink
@@ -30,9 +30,9 @@ function MenuLink({ text, path }: MenuLinkProps): React.ReactElement {
       to={path}
       title={text}
     >
-      <span className={styles.dot}></span>
+      <span className={styles.dot} />
       {dotEnabled && dotActivated ? (
-        <div className={`${styles.dot} ${styles.dotExpansion}`}></div>
+        <div className={`${styles.dot} ${styles.dotExpansion}`} />
       ) : null}
     </NavLink>
   );
@@ -46,10 +46,7 @@ export default function Menu() {
         aria-label="Juan Pablo Lozano"
         className={styles.brandName}
       >
-        <TypeAnimation
-          sequence={['Juan Pablo Lozano']}
-          cursor={true}
-        ></TypeAnimation>
+        <TypeAnimation sequence={['Juan Pablo Lozano']} cursor />
       </NavLink>
       <MenuLink text="About" path="/" />
       <MenuLink text="Tech stack" path="/tech" />

@@ -20,7 +20,8 @@ const slice = createSlice({
   initialState,
   reducers: {
     setSkin: (state, action: PayloadAction<Skin>) => {
-      state.skin = action.payload;
+      const newState = state;
+      newState.skin = action.payload;
 
       setColorScheme(action.payload);
     },

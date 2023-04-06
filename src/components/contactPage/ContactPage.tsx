@@ -1,11 +1,11 @@
-import styles from './ContactPage.module.css';
 import { NavLink } from 'react-router-dom';
+import styles from './ContactPage.module.css';
 
 export default function ContactPage() {
   return (
     <main>
       <h1>
-        Let's work together<span className="color-primary">.</span>
+        Let&apos;s work together<span className="color-primary">.</span>
       </h1>
       <h2>
         If you are interested in my services and would like to hire me for
@@ -35,10 +35,6 @@ export default function ContactPage() {
             </NavLink>
           </li>
         </ul>
-
-        {/*<button className={styles.btn} type="button">
-            Schedule a meeting
-  </button>*/}
       </div>
     </main>
   );

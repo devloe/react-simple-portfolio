@@ -12,7 +12,7 @@ const CreditsPage = React.lazy(
   () => import('../components/creditsPage/CreditsPage')
 );
 
-const router = createBrowserRouter([
+export default createBrowserRouter([
   {
     path: '/',
     element: <App />,
@@ -36,5 +36,3 @@ const router = createBrowserRouter([
     ],
   },
 ]);
-
-export { router };
