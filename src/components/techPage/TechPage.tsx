@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './TechPage.module.css';
 
 export default function TechPage() {

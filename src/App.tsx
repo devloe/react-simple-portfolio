@@ -1,7 +1,7 @@
-import styles from './App.module.css';
+import { Outlet } from 'react-router-dom';
 import Footer from './components/footer/Footer';
 import Menu from './components/menu/Menu';
-import { Outlet } from 'react-router-dom';
+import styles from './App.module.css';
 
 function App() {
   return (

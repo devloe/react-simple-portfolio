@@ -15,13 +15,13 @@ export function setColorScheme(scheme: 'dark' | 'light') {
 }
 
 export function detectColorScheme(): Skin {
-  //local storage is used to override OS theme settings
+  // local storage is used to override OS theme settings
   if (localStorage.getItem('theme')) {
     return localStorage.getItem('theme') as Skin;
   }
 
   if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    //OS theme setting detected as dark
+    // OS theme setting detected as dark
     return 'dark';
   }
 
